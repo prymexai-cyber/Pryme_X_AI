@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pryme X AI | Cyber AI Solution</title>
+
+    <link rel="icon" type="image/png" href="image_17.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { cursor: none; background-color: #0d0d0d; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .gold-gradient { background: linear-gradient(90deg, #FFD700, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #custom-cursor { width: 8px; height: 8px; background: #FFD700; border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; box-shadow: 0 0 10px #FFD700; }
+        #cursor-follower { width: 30px; height: 30px; border: 1px solid rgba(255, 215, 0, 0.5); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.15s ease-out; }
+        .hero-banner { position: relative; background-image: url('banner one.jpg'); background-size: cover; background-position: center; background-attachment: fixed; height: 100vh; }
+        .hero-banner::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.7); z-index: 1; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); transition: 0.3s; }
+        .glass-card:hover { border-color: #FFD700; transform: translateY(-5px); }
+        @media (max-width: 768px) { body { cursor: auto; } #custom-cursor, #cursor-follower { display: none; } }
+    </style>
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <nav class="p-6 flex justify-between items-center fixed w-full z-50 bg-[#0d0d0d]/80 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="image_17.png" alt="Logo" class="h-10 w-10">
+            <span class="text-xl font-bold tracking-widest uppercase italic">Pryme X <span class="text-yellow-500 text-sm">AI</span></span>
+        </a>
+        <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-gray-400">
+            <a href="index.html" class="text-yellow-500 font-bold">Home</a>
+            <a href="about.html" class="hover:text-yellow-500 transition">About</a>
+            <a href="#solutions" class="hover:text-yellow-500 transition">Solutions</a>
+            <a href="services.html" class="hover:text-yellow-500 transition">Services</a>
+            <a href="team.html" class="hover:text-yellow-500 transition">Team</a>
+            <a href="contact.html" class="hover:text-yellow-500 transition border px-4 py-1 border-yellow-500/50 rounded-full">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero-banner flex items-center justify-center text-center px-4">
+        <div class="relative z-10">
+            <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-bold mb-6 italic">Pryme X <span class="gold-gradient">AI</span> <br> Cyber Solution</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl mx-auto text-gray-400 mb-10 text-lg">Protecting your digital kingdom with advanced AI strategies.</p>
+            <a href="#solutions" class="px-10 py-3 rounded-full bg-yellow-500 text-black font-bold uppercase text-xs">Explore Solutions</a>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-24 px-8 bg-[#111]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-8 italic gold-gradient uppercase">Advanced Access Solutions</h2>
+                <ul class="space-y-4 text-gray-300">
+                    <li>✅ Real-time Intrusion Detection</li>
+                    <li>✅ Automated Vulnerability Assessment</li>
+                    <li>✅ Encrypted Cloud Storage</li>
+                    <li>✅ Zero Trust Architecture</li>
+                </ul>
+            </div>
+            <div data-aos="zoom-in" class="rounded-3xl border border-white/5 shadow-2xl overflow-hidden">
+                <img src="advanceaisolution.png" alt="Solutions" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.3em]">
+        © 2026 Pryme X AI • Cyber AI Solution
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const cursor = document.getElementById('custom-cursor');
+        const follower = document.getElementById('cursor-follower');
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px';
+            setTimeout(() => { follower.style.left = (e.clientX - 11) + 'px'; follower.style.top = (e.clientY - 11) + 'px'; }, 60);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Hero Banner with the Robot Image */
+.hero-banner {
+    position: relative;
+    background-image: url('banner one.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7); /* පින්තූරය උඩ අඳුරු ගතිය */
+    z-index: 1;
+}
+
+
+.hero-banner > div, 
+.hero-banner h1, 
+.hero-banner p, 
+.hero-banner div {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Base Styles */
+body { background-color: #0d0d0d; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; cursor: none; }
+.gold-gradient { background: linear-gradient(90deg, #FFD700, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.btn-outline { border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; cursor: none; }
+.btn-outline:hover { background-color: rgba(255, 215, 0, 0.1); border-color: #FFD700; transform: translateY(-3px); }
+.glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); transition: all 0.3s ease; }
+.glass-card:hover { border-color: rgba(255, 215, 0, 0.3); transform: scale(1.02); }
+
+/* Particle Cursor Effect */
+#cursor-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+.particle { position: absolute; background-color: #FFD700; border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); }

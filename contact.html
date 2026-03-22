@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Pryme X AI</title>
+    <link rel="icon" type="image/png" href="image_17.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { cursor: none; background-color: #0d0d0d; color: white; font-family: 'Inter', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); }
+        .animated-header { background: rgba(13, 13, 13, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 215, 0, 0.1); animation: slideDown 0.8s ease-out forwards; }
+        @keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+        #custom-cursor { width: 8px; height: 8px; background: #FFD700; border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; box-shadow: 0 0 10px #FFD700; }
+        #cursor-follower { width: 50px; height: 50px; border: 1px solid rgba(255, 215, 0, 0.5); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.15s ease-out; }
+    </style>
+</head>
+<body class="flex flex-col items-center">
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
+
+  <nav class="p-6 flex justify-between items-center fixed w-full z-50 bg-[#0d0d0d]/80 backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="image_17.png" alt="Logo" class="h-10 w-10">
+            <span class="text-xl font-bold tracking-widest uppercase italic">Pryme X <span class="text-yellow-500 text-sm">AI</span></span>
+        </a>
+        <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-gray-400">
+            <a href="index.html" >Home</a>
+            <a href="about.html" class="hover:text-yellow-500 transition">About</a>
+             <a href="index.html#solutions">Solutions</a>
+            <a href="services.html" >Services</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html" class="text-yellow-500 font-bold hover:text-yellow-500 transition border px-4 py-1 border-yellow-500/50 rounded-full">Contact</a>
+        </div>
+    </nav>
+
+
+    <div class="pt-40 max-w-4xl w-full p-8">
+        <div class="glass-card p-16 rounded-[50px] text-center shadow-2xl border-white/10">
+            <h1 class="text-5xl font-bold mb-12 italic uppercase">Contact <span class="text-yellow-500">Us</span></h1>
+            <div class="space-y-10">
+                <div><p class="text-gray-500 uppercase tracking-[0.4em] text-[10px] mb-1">Contact Number</p><p class="text-1.5xl font-bold">+94 74 087 5089 / +94 70 141 2694 / +1 380 260 5028 </p></div>
+            
+                <div><p class="text-gray-500 uppercase tracking-[0.4em] text-[10px] mb-2">Email</p><p class="text-2xl font-bold text-yellow-500">Prymexai@gmail.com</p></div>
+            </div>
+            <div class="flex justify-center gap-8 mt-16 pt-10 border-t border-white/5">
+               <div><p class="text-gray-500 uppercase tracking-[0.4em] text-[10px] mb-2">Scocial Media</p>
+                <a href="https://www.linkedin.com/in/pryme-x-ai-061088394/" class="text-blue-400 hover:text-white transition uppercase tracking-widest text-xs">LinkedIn / </a>
+                <a href="https://www.facebook.com/profile.php?id=61583801992397" class="text-blue-500 hover:text-white transition uppercase tracking-widest text-xs">Facebook / </a>
+                <a href="https://www.instagram.com/pryme_x_ai/" class="text-blue-500 hover:text-white transition uppercase tracking-widest text-xs">Instagram / </a>
+                <a href="https://www.behance.net/prymexai" class="text-blue-500 hover:text-white transition uppercase tracking-widest text-xs">Behance / </a>
+                <a href="https://www.tiktok.com/@pryme_x_ai" class="text-blue-500 hover:text-white transition uppercase tracking-widest text-xs">Tik Tok</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.3em]">
+        © 2026 Pryme X AI • Cyber AI Solution
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        const follower = document.getElementById('cursor-follower');
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px';
+            setTimeout(() => { follower.style.left = (e.clientX - 11) + 'px'; follower.style.top = (e.clientY - 11) + 'px'; }, 60);
+        });
+    </script>
+</body>
+</html>

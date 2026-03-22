@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Pryme X AI</title>
+
+    <link rel="icon" type="image/png" href="image_17.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body { cursor: none; background-color: #0d0d0d; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .gold-gradient { background: linear-gradient(90deg, #FFD700, #B8860B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); transition: 0.3s; }
+        .animated-header { background: rgba(13, 13, 13, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 215, 0, 0.1); animation: slideDown 0.8s ease-out forwards; }
+        @keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+        #custom-cursor { width: 8px; height: 8px; background: #FFD700; border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; box-shadow: 0 0 10px #FFD700; }
+        #cursor-follower { width: 30px; height: 30px; border: 1px solid rgba(255, 215, 0, 0.5); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.15s ease-out; }
+    </style>
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <nav class="animated-header p-5 flex justify-between items-center fixed top-0 w-full z-[1000]">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="image_17.png" alt="Logo" class="h-10 w-10">
+            <span class="text-xl font-bold tracking-[0.2em] uppercase italic">Pryme X <span class="text-yellow-500 text-sm">AI</span></span>
+        </a>
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.2em] text-gray-300 items-center">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="text-yellow-500 font-bold">About</a>
+            <a href="index.html#solutions">Solutions</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Team</a>
+             <a href="contact.html" class="hover:text-yellow-500 transition border px-4 py-1 border-yellow-500/50 rounded-full">Contact</a>
+        </div>
+    </nav>
+
+    <div class="pt-50 max-w-3xl mx-auto p-12 md:p-20">
+        <h1 class="text-6xl font-bold mb-12 gold-gradient italic uppercase text-center" data-aos="fade-up">Our Company</h1>
+        <div class="glass-card p-12 rounded-[40px] text-gray-300 leading-relaxed mb-12 shadow-2xl" data-aos="fade-up">
+            <p class="mb-8 text-xl italic text-yellow-500 text-center">"To build a 'Predictive Digital Fortress' where AI-driven systems neutralize threats before they manifest."</p>
+            <p class="mb-6">Pryme X AI is a global pioneer in the fusion of Artificial Intelligence and Cybersecurity, dedicated to securing the digital landscape for the modern era. Combining Sri Lankan engineering brilliance with a strategic vision from the USA, we deliver autonomous defense solutions that empower enterprises worldwide.
+
+Unlike traditional reactive security, our approach leverages advanced AI to predict and neutralize threats before they can impact your operations. With an elite team of international experts, we are committed to building a safer, more resilient digital future for all.</p>
+            <h3 class="text-2xl font-bold text-yellow-500 mb-4 italic uppercase">Our Mission</h3>
+            <p>Our mission is to redefine the standards of digital safety by creating self-healing, intelligent security architectures. We believe that the future of protection lies not in defending against attacks, but in predicting and preventing them through the power of global expertise and cutting-edge technology.</p>
+        </div>
+    </div>
+
+    
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.3em]">
+        © 2026 Pryme X AI • Cyber AI Solution
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const cursor = document.getElementById('custom-cursor');
+        const follower = document.getElementById('cursor-follower');
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px';
+            setTimeout(() => { follower.style.left = (e.clientX - 11) + 'px'; follower.style.top = (e.clientY - 11) + 'px'; }, 60);
+        });
+    </script>
+</body>
+</html>
